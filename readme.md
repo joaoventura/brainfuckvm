@@ -1,6 +1,6 @@
 # Brainfuck VM
 
-Simple brainfuck interpreter in Python 3.
+A simple brainfuck interpreter in Python 3.
 
 Usage:
 ```python3
@@ -17,6 +17,22 @@ Hello World
 ```
 
 ## Some examples
+
+Set the value of block #1 as 3
+```python
+> bf.eval('+++')
+> bf.state()
+
+[3] 0 0 0 0 0 0 0 0 0 
+```
+
+Set block #1 = 1, move pointer to block #2 and set block #2 = 4
+```python
+> bf.eval('+>++++')
+> bf.state()
+
+1 [4] 0 0 0 0 0 0 0 0 
+```
 
 Add 5 + 2 with the result on block #1
 ```python
